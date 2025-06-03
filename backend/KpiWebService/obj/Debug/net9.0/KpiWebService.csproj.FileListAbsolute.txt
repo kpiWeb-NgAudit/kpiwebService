@@ -159,3 +159,4 @@ C:\Users\KpiWeb_STG\OneDrive - KPIWEB\Bureau\with .net\backend\KpiWebService\obj
 C:\Users\KpiWeb_STG\OneDrive - KPIWEB\Bureau\with .net\backend\KpiWebService\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\KpiWeb_STG\OneDrive - KPIWEB\Bureau\with .net\backend\KpiWebService\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\KpiWeb_STG\OneDrive - KPIWEB\Bureau\with .net\backend\KpiWebService\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\KpiWeb_STG\OneDrive - KPIWEB\Bureau\with .net\backend\KpiWebService\obj\Debug\net9.0\KpiWebService.sourcelink.json

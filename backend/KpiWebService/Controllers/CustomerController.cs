@@ -20,8 +20,19 @@ namespace KpiWebService.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<customer>>> GetCustomers()
         {
-            
-            return await _context.customers.ToListAsync();
+            try
+            {
+                // Utilise l'entité customer et le DbContext simplifiés
+                var customers = await _context.customers.Take(10).ToListAsync(); // Take(10) pour limiter les données
+                return Ok(customers);
+            }
+            catch (Exception ex)
+            {
+                // Logguez l'exception complète pour voir la stack trace détaillée
+                Console.WriteLine($"ERROR IN GetCustomers: {ex.ToString()}");
+                // Vous pouvez mettre un point d'arrêt ici pour inspecter ex
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         // GET: api/Customer/{id}
