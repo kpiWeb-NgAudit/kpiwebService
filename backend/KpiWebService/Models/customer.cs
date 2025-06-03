@@ -90,8 +90,8 @@ public partial class customer
     // [StringLength(255)]
     // public string? cust_charseparator { get; set; }
     //
-    // [Column("cust_limitrdlfilter")]
-    // public int cust_limitrdlfilter { get; set; }
+     [Column("cust_limitrdlfilter")]
+     public int cust_limitrdlfilter { get; set; }
     //
     // [Required]
     // [Column("cust_rdlinterwidlen")]
@@ -107,15 +107,15 @@ public partial class customer
     // [Column("cust_language")]
     // public CustLanguage  cust_language { get; set; }
     //
-    // [Column("cube_nbproddatasources")]
-    // public int cube_nbproddatasources { get; set; }
+     [Column("cube_nbproddatasources")]
+     public int cube_nbproddatasources { get; set; }
     //
     // [Column("cube_proddatasource_prefix")]
     // [StringLength(3)]
     // public string? cube_proddatasource_prefix { get; set; }
     //
-    // [Column("cust_beginmonthfiscal")]
-    // public int cust_beginmonthfiscal { get; set; }
+     [Column("cust_beginmonthfiscal")]
+     public int cust_beginmonthfiscal { get; set; }
     //
     // [Required]
     // [Column("cust_rdlcurrencyformat")]
@@ -134,11 +134,11 @@ public partial class customer
     // [StringLength(255)] 
     // public string? cube_optimratio { get; set; }
     //
-    // [Column("cube_nbdimtimevcol")]
-    // public int cube_nbdimtimevcol { get; set; }
+     [Column("cube_nbdimtimevcol")]
+     public int cube_nbdimtimevcol { get; set; }
     //
-    // [Column("cube_nbdimgeovcol")]
-    // public int cube_nbdimgeovcol { get; set; }
+     [Column("cube_nbdimgeovcol")]
+     public int cube_nbdimgeovcol { get; set; }
     //
     // [Column("cust_internalnotes", TypeName = "text")]
     // public string? cust_internalnotes { get; set; }
@@ -180,8 +180,8 @@ public partial class customer
     // [Column("cube_scope_mdxinstruction", TypeName = "ntext")]
     // public string? cube_scope_mdxinstruction { get; set; }
     //
-    // [Column("cube_drillthroughnbrows")]
-    // public int cube_drillthroughnbrows { get; set; }
+     [Column("cube_drillthroughnbrows")]
+     public int cube_drillthroughnbrows { get; set; }
     //
     // [Column("cube_factcoldefaultmeasure")]
     // [StringLength(255)]
