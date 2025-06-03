@@ -1,0 +1,6 @@
+@KpiWebService_HostAddress = http://localhost:5208
+
+GET {{KpiWebService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
