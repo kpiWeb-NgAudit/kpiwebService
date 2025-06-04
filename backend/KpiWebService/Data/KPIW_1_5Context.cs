@@ -195,15 +195,15 @@ public partial class KPIW_1_5Context : DbContext
             // entity.Property(e => e.cube_id_pk).HasMaxLength(15);
             // entity.Property(e => e.cube_comments).HasColumnType("text");
             // entity.Property(e => e.cube_dailytasktrigger).HasMaxLength(6);
-            // entity.Property(e => e.cube_dimtimepkmanager).HasMaxLength(6);
+             entity.Property(e => e.cube_dimtimepkmanager).HasMaxLength(6);
             // entity.Property(e => e.cube_distinctcountpartition).HasMaxLength(6);
             // entity.Property(e => e.cube_factcoldefaultmeasure)
             //     .HasMaxLength(255)
             //     .IsUnicode(false);
-            // entity.Property(e => e.cube_ftppasswd).HasMaxLength(12);
-            // entity.Property(e => e.cube_ftpuser).HasMaxLength(12);
+             entity.Property(e => e.cube_ftppasswd).HasMaxLength(12);
+             entity.Property(e => e.cube_ftpuser).HasMaxLength(12);
             // entity.Property(e => e.cube_globalperspective).HasMaxLength(6);
-            // entity.Property(e => e.cube_identity).HasMaxLength(35);
+             entity.Property(e => e.cube_identity).HasMaxLength(35);
             // entity.Property(e => e.cube_lastprocess).HasColumnType("datetime");
             // entity.Property(e => e.cube_lastupdate).HasColumnType("datetime");
             // entity.Property(e => e.cube_localcubgenerate).HasMaxLength(5);
@@ -218,7 +218,7 @@ public partial class KPIW_1_5Context : DbContext
             // entity.Property(e => e.cust_charseparator)
             //     .HasMaxLength(255)
             //     .IsUnicode(false);
-            // entity.Property(e => e.cust_connect_str).HasMaxLength(100);
+             entity.Property(e => e.cust_connect_str).HasMaxLength(100);
             // entity.Property(e => e.cust_contact1)
             //     .HasMaxLength(100)
             //     .IsUnicode(false);
@@ -231,22 +231,22 @@ public partial class KPIW_1_5Context : DbContext
             // entity.Property(e => e.cust_country).HasMaxLength(30);
             // entity.Property(e => e.cust_cubetype).HasMaxLength(9);
             // entity.Property(e => e.cust_dbtype).HasMaxLength(8);
-            // entity.Property(e => e.cust_erptype).HasMaxLength(12);
+             entity.Property(e => e.cust_erptype).HasMaxLength(12);
             // entity.Property(e => e.cust_externalnotes).HasColumnType("text");
-            // entity.Property(e => e.cust_geocode).HasMaxLength(7);
+             entity.Property(e => e.cust_geocode).HasMaxLength(7);
             // entity.Property(e => e.cust_internalnotes).HasColumnType("text");
             // entity.Property(e => e.cust_language).HasMaxLength(3);
             // entity.Property(e => e.cust_ostype).HasMaxLength(8);
-            // entity.Property(e => e.cust_rdlcurrencyformat).HasMaxLength(5);
-            // entity.Property(e => e.cust_rdlinterwidlen).HasMaxLength(7);
+             entity.Property(e => e.cust_rdlcurrencyformat).HasMaxLength(5);
+             entity.Property(e => e.cust_rdlinterwidlen).HasMaxLength(7);
             // entity.Property(e => e.cust_refreshfrq).HasMaxLength(10);
             // entity.Property(e => e.cust_refreshfrqmonth).HasMaxLength(10);
-            // entity.Property(e => e.cust_showfiscmeasureandset).HasMaxLength(5);
-            // entity.Property(e => e.cust_showpctdifferencebase100).HasMaxLength(5);
+             entity.Property(e => e.cust_showfiscmeasureandset).HasMaxLength(5);
+             entity.Property(e => e.cust_showpctdifferencebase100).HasMaxLength(5);
             // entity.Property(e => e.cust_timestamp)
             //     .IsRowVersion()
             //     .IsConcurrencyToken();
-            // entity.Property(e => e.cust_town).HasMaxLength(30);
+             entity.Property(e => e.cust_town).HasMaxLength(30);
         });
 
         // modelBuilder.Entity<dimcolumn>(entity =>

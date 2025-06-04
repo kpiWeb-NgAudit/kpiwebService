@@ -22,20 +22,20 @@ public partial class customer
     // [StringLength(50)]
     // public string cube_name { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_geocode")]
-    // [StringLength(7)]
-    // public string cust_geocode { get; set; } = null!;
+    [Required]
+    [Column("cust_geocode")]
+    [StringLength(7)]
+    public string cust_geocode { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_town")]
-    // [StringLength(30)]
-    // public string cust_town { get; set; } = null!;
+    [Required]
+    [Column("cust_town")]
+    [StringLength(30)]
+    public string cust_town { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_country")]
-    // [StringLength(30)] 
-    // public string cust_country { get; set; } = null!;
+    [Required]
+    [Column("cust_country")]
+    [StringLength(30)] 
+    public string cust_country { get; set; } = null!;
     //
     // [Required] // Équivalent de NOT NULL pour la validation
     // [Column("cust_cubetype")]
@@ -50,15 +50,15 @@ public partial class customer
     // [StringLength(8)]
     // public string? cust_dbtype { get; set; }
     //
-    // [Required]
-    // [Column("cust_erptype")]
-    // [StringLength(12)]
-    // public string cust_erptype { get; set; } = null!;
+    [Required]
+    [Column("cust_erptype")]
+    [StringLength(12)]
+    public string cust_erptype { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_connect_str")]
-    // [StringLength(100)]
-    // public string cust_connect_str { get; set; } = null!;
+    [Required]
+    [Column("cust_connect_str")]
+    [StringLength(100)]
+    public string cust_connect_str { get; set; } = null!;
     //
     // [Column("cube_lastupdate")]
     // public DateTime cube_lastupdate { get; set; }
@@ -66,15 +66,15 @@ public partial class customer
     // [Column("cube_lastprocess")]
     // public DateTime cube_lastprocess { get; set; }
     //
-    // [Required]
-    // [Column("cube_ftpuser")]
-    // [StringLength(12)]
-    // public string cube_ftpuser { get; set; } = null!;
+    [Required]
+    [Column("cube_ftpuser")]
+    [StringLength(12)]
+    public string cube_ftpuser { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cube_ftppasswd")]
-    // [StringLength(12)]
-    // public string cube_ftppasswd { get; set; } = null!;
+    [Required]
+    [Column("cube_ftppasswd")]
+    [StringLength(12)]
+    public string cube_ftppasswd { get; set; } = null!;
     //
     // [Required]
     // [Column("cust_refreshfrq")]
@@ -93,15 +93,15 @@ public partial class customer
      [Column("cust_limitrdlfilter")]
      public int cust_limitrdlfilter { get; set; }
     //
-    // [Required]
-    // [Column("cust_rdlinterwidlen")]
-    // [StringLength(7)]
-    // public string cust_rdlinterwidlen { get; set; } = null!;
+    [Required]
+    [Column("cust_rdlinterwidlen")]
+    [StringLength(7)]
+    public string cust_rdlinterwidlen { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cube_identity")]
-    // [StringLength(35)]
-    // public string cube_identity { get; set; } = null!;
+    [Required]
+    [Column("cube_identity")]
+    [StringLength(35)]
+    public string cube_identity { get; set; } = null!;
     //
     // [Required]
     // [Column("cust_language")]
@@ -117,10 +117,10 @@ public partial class customer
      [Column("cust_beginmonthfiscal")]
      public int cust_beginmonthfiscal { get; set; }
     //
-    // [Required]
-    // [Column("cust_rdlcurrencyformat")]
-    // [StringLength(5)]
-    // public string cust_rdlcurrencyformat { get; set; } = null!;
+    [Required]
+    [Column("cust_rdlcurrencyformat")]
+    [StringLength(5)]
+    public string cust_rdlcurrencyformat { get; set; } = null!;
     //
     // [Required]
     // [Column("cube_dailytasktrigger")]
@@ -158,20 +158,20 @@ public partial class customer
     // [StringLength(100)]
     // public string? cust_contact3 { get; set; }
     //
-    // [Required]
-    // [Column("cust_showfiscmeasureandset")]
-    // [StringLength(5)]
-    // public string cust_showfiscmeasureandset { get; set; } = null!;
+    [Required]
+    [Column("cust_showfiscmeasureandset")]
+    [StringLength(5)]
+    public string cust_showfiscmeasureandset { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_showpctdifferencebase100")]
-    // [StringLength(5)]
-    // public string cust_showpctdifferencebase100 { get; set; } = null!;
+    [Required]
+    [Column("cust_showpctdifferencebase100")]
+    [StringLength(5)]
+    public string cust_showpctdifferencebase100 { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cube_dimtimepkmanager")]
-    // [StringLength(6)]
-    // public string cube_dimtimepkmanager { get; set; } = null!;
+    [Required]
+    [Column("cube_dimtimepkmanager")]
+    [StringLength(6)]
+    public string cube_dimtimepkmanager { get; set; } = null!;
     //
     // [Required]
     // [Column("cube_globalperspective")]
