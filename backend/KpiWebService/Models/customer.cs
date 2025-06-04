@@ -17,10 +17,10 @@ public partial class customer
     [Column("cube_number")]
     public int cube_number { get; set; }
 
-    // [Required]
-    // [Column("cube_name")]
-    // [StringLength(50)]
-    // public string cube_name { get; set; } = null!;
+    [Required]
+    [Column("cube_name")]
+    [StringLength(50)]
+    public string cube_name { get; set; } = null!;
     //
     [Required]
     [Column("cust_geocode")]
@@ -37,18 +37,18 @@ public partial class customer
     [StringLength(30)] 
     public string cust_country { get; set; } = null!;
     //
-    // [Required] // Équivalent de NOT NULL pour la validation
-    // [Column("cust_cubetype")]
-    // [StringLength(9)] // Correspond à la longueur max de la DB
-    // public CustCubetype cust_cubetype { get; set; }
+    [Required] // Équivalent de NOT NULL pour la validation
+    [Column("cust_cubetype")]
+    [StringLength(9)] // Correspond à la longueur max de la DB
+    public string cust_cubetype { get; set; }
     //
-    // [Column("cust_ostype")]
-    // [StringLength(8)]
-    // public string? cust_ostype { get; set; }
+    [Column("cust_ostype")]
+    [StringLength(8)]
+    public string? cust_ostype { get; set; }
     //
-    // [Column("cust_dbtype")]
-    // [StringLength(8)]
-    // public string? cust_dbtype { get; set; }
+    [Column("cust_dbtype")]
+    [StringLength(8)]
+    public string? cust_dbtype { get; set; }
     //
     [Required]
     [Column("cust_erptype")]
@@ -60,11 +60,11 @@ public partial class customer
     [StringLength(100)]
     public string cust_connect_str { get; set; } = null!;
     //
-    // [Column("cube_lastupdate")]
-    // public DateTime cube_lastupdate { get; set; }
+    [Column("cube_lastupdate")]
+    public DateTime cube_lastupdate { get; set; }
     //
-    // [Column("cube_lastprocess")]
-    // public DateTime cube_lastprocess { get; set; }
+    [Column("cube_lastprocess")]
+    public DateTime cube_lastprocess { get; set; }
     //
     [Required]
     [Column("cube_ftpuser")]
@@ -76,19 +76,19 @@ public partial class customer
     [StringLength(12)]
     public string cube_ftppasswd { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_refreshfrq")]
-    // public CustRefreshFrq  cust_refreshfrq { get; set; }
+    [Required]
+    [Column("cust_refreshfrq")]
+    public string  cust_refreshfrq { get; set; }
     //
     //
-    // [Required]
-    // [Column("cust_refreshfrqmonth")]
-    // [StringLength(10)] // Doit accommoder RM2805
-    // public CustRefreshFrqMonth cust_refreshfrqmonth { get; set; }
+    [Required]
+    [Column("cust_refreshfrqmonth")]
+    [StringLength(10)] // Doit accommoder RM2805
+    public string cust_refreshfrqmonth { get; set; }
     //
-    // [Column("cust_charseparator")]
-    // [StringLength(255)]
-    // public string? cust_charseparator { get; set; }
+    [Column("cust_charseparator")]
+    [StringLength(255)]
+    public string? cust_charseparator { get; set; }
     //
      [Column("cust_limitrdlfilter")]
      public int cust_limitrdlfilter { get; set; }
@@ -103,16 +103,16 @@ public partial class customer
     [StringLength(35)]
     public string cube_identity { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cust_language")]
-    // public CustLanguage  cust_language { get; set; }
+    [Required]
+    [Column("cust_language")]
+    public string  cust_language { get; set; }
     //
      [Column("cube_nbproddatasources")]
      public int cube_nbproddatasources { get; set; }
     //
-    // [Column("cube_proddatasource_prefix")]
-    // [StringLength(3)]
-    // public string? cube_proddatasource_prefix { get; set; }
+    [Column("cube_proddatasource_prefix")]
+    [StringLength(3)]
+    public string? cube_proddatasource_prefix { get; set; }
     //
      [Column("cust_beginmonthfiscal")]
      public int cust_beginmonthfiscal { get; set; }
@@ -122,17 +122,17 @@ public partial class customer
     [StringLength(5)]
     public string cust_rdlcurrencyformat { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cube_dailytasktrigger")]
-    // public CubeDailyTaskTrigger  cube_dailytasktrigger { get; set; }
+    [Required]
+    [Column("cube_dailytasktrigger")]
+    public string  cube_dailytasktrigger { get; set; }
     //
-    // [Required]
-    // [Column("cube_localcubgenerate")]
-    // public CubeLocalCubGenerate  cube_localcubgenerate { get; set; }
+    [Required]
+    [Column("cube_localcubgenerate")]
+    public string  cube_localcubgenerate { get; set; }
     //
-    // [Column("cube_optimratio")]
-    // [StringLength(255)] 
-    // public string? cube_optimratio { get; set; }
+    [Column("cube_optimratio")]
+    [StringLength(255)] 
+    public string? cube_optimratio { get; set; }
     //
      [Column("cube_nbdimtimevcol")]
      public int cube_nbdimtimevcol { get; set; }
@@ -140,23 +140,23 @@ public partial class customer
      [Column("cube_nbdimgeovcol")]
      public int cube_nbdimgeovcol { get; set; }
     //
-    // [Column("cust_internalnotes", TypeName = "text")]
-    // public string? cust_internalnotes { get; set; }
+    [Column("cust_internalnotes", TypeName = "text")]
+    public string? cust_internalnotes { get; set; }
     //
-    // [Column("cust_externalnotes", TypeName = "text")]
-    // public string? cust_externalnotes { get; set; }
+    [Column("cust_externalnotes", TypeName = "text")]
+    public string? cust_externalnotes { get; set; }
     //
-    // [Column("cust_contact1")]
-    // [StringLength(100)]
-    // public string? cust_contact1 { get; set; }
+    [Column("cust_contact1")]
+    [StringLength(100)]
+    public string? cust_contact1 { get; set; }
     //
-    // [Column("cust_contact2")]
-    // [StringLength(100)]
-    // public string? cust_contact2 { get; set; }
+    [Column("cust_contact2")]
+    [StringLength(100)]
+    public string? cust_contact2 { get; set; }
     //
-    // [Column("cust_contact3")]
-    // [StringLength(100)]
-    // public string? cust_contact3 { get; set; }
+    [Column("cust_contact3")]
+    [StringLength(100)]
+    public string? cust_contact3 { get; set; }
     //
     [Required]
     [Column("cust_showfiscmeasureandset")]
@@ -173,41 +173,41 @@ public partial class customer
     [StringLength(6)]
     public string cube_dimtimepkmanager { get; set; } = null!;
     //
-    // [Required]
-    // [Column("cube_globalperspective")]
-    // public CubeGlobalPerspective  cube_globalperspective { get; set; }
+    [Required]
+    [Column("cube_globalperspective")]
+    public string  cube_globalperspective { get; set; }
     //
-    // [Column("cube_scope_mdxinstruction", TypeName = "ntext")]
-    // public string? cube_scope_mdxinstruction { get; set; }
+    [Column("cube_scope_mdxinstruction", TypeName = "ntext")]
+    public string? cube_scope_mdxinstruction { get; set; }
     //
      [Column("cube_drillthroughnbrows")]
      public int cube_drillthroughnbrows { get; set; }
     //
-    // [Column("cube_factcoldefaultmeasure")]
-    // [StringLength(255)]
-    // public string? cube_factcoldefaultmeasure { get; set; }
+    [Column("cube_factcoldefaultmeasure")]
+    [StringLength(255)]
+    public string? cube_factcoldefaultmeasure { get; set; }
     //
-    // [Required]
-    // [Column("cube_distinctcountpartition")]
-    // public CubeDistinctCountPartition  cube_distinctcountpartition { get; set; }
+    [Required]
+    [Column("cube_distinctcountpartition")]
+    public string  cube_distinctcountpartition { get; set; }
     //
-    // [Required]
-    // [Column("cube_typenormalreplica")]
-    // public CubeTypeNormalReplica  cube_typenormalreplica { get; set; }
+    [Required]
+    [Column("cube_typenormalreplica")]
+    public string  cube_typenormalreplica { get; set; }
     //
-    // [Column("cube_paramwhenreplica")]
-    // [StringLength(15)]
-    // public string? cube_paramwhenreplica { get; set; }
+    [Column("cube_paramwhenreplica")]
+    [StringLength(15)]
+    public string? cube_paramwhenreplica { get; set; }
     //
-    // [Column("cube_comments", TypeName = "text")]
-    // public string? cube_comments { get; set; }
+    [Column("cube_comments", TypeName = "text")]
+    public string? cube_comments { get; set; }
     //
-    // [Required]
-    // [Column("cust_timestamp", TypeName = "timestamp")] // EF Core comprend 'timestamp' comme rowversion pour SQL Server
-    // [Timestamp] // DataAnnotation pour rowversion
-    // public byte[] cust_timestamp { get; set; } = null!;
+    [Required]
+    [Column("cust_timestamp", TypeName = "timestamp")] // EF Core comprend 'timestamp' comme rowversion pour SQL Server
+    [Timestamp] // DataAnnotation pour rowversion
+    public byte[] cust_timestamp { get; set; } = null!;
     //
-    // public virtual ICollection<cube_user> cube_users { get; set; } = new List<cube_user>();
+     //public virtual ICollection<cube_user> cube_users { get; set; } = new List<cube_user>();
     //
     // public virtual ICollection<cubeset> cubesets { get; set; } = new List<cubeset>();
     //

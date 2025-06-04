@@ -32,7 +32,7 @@ public partial class KPIW_1_5Context : DbContext
     //
     // public virtual DbSet<exploitInstruction> exploitInstructions { get; set; }
     //
-    // public virtual DbSet<fact> facts { get; set; }
+     //public virtual DbSet<fact> facts { get; set; }
     //
     // public virtual DbSet<factcolumn> factcolumns { get; set; }
     //
@@ -188,64 +188,64 @@ public partial class KPIW_1_5Context : DbContext
         {
             entity.HasKey(e => e.cube_id_pk).HasName("cust_pk_customers");
 
-            // entity.HasIndex(e => e.cube_name, "cust_uq_cust_name").IsUnique();
+             entity.HasIndex(e => e.cube_name, "cust_uq_cust_name").IsUnique();
             //
-            // entity.HasIndex(e => e.cube_number, "cust_uq_cust_number").IsUnique();
+             //entity.HasIndex(e => e.cube_number, "cust_uq_cust_number").IsUnique();  //1
             //
-            // entity.Property(e => e.cube_id_pk).HasMaxLength(15);
-            // entity.Property(e => e.cube_comments).HasColumnType("text");
-            // entity.Property(e => e.cube_dailytasktrigger).HasMaxLength(6);
+             //entity.Property(e => e.cube_id_pk).HasMaxLength(15); //1
+             entity.Property(e => e.cube_comments).HasColumnType("text");
+             entity.Property(e => e.cube_dailytasktrigger).HasMaxLength(6);
              entity.Property(e => e.cube_dimtimepkmanager).HasMaxLength(6);
-            // entity.Property(e => e.cube_distinctcountpartition).HasMaxLength(6);
-            // entity.Property(e => e.cube_factcoldefaultmeasure)
-            //     .HasMaxLength(255)
-            //     .IsUnicode(false);
+             entity.Property(e => e.cube_distinctcountpartition).HasMaxLength(6);
+            entity.Property(e => e.cube_factcoldefaultmeasure)
+                .HasMaxLength(255)
+                .IsUnicode(false);
              entity.Property(e => e.cube_ftppasswd).HasMaxLength(12);
              entity.Property(e => e.cube_ftpuser).HasMaxLength(12);
-            // entity.Property(e => e.cube_globalperspective).HasMaxLength(6);
+             entity.Property(e => e.cube_globalperspective).HasMaxLength(6);
              entity.Property(e => e.cube_identity).HasMaxLength(35);
-            // entity.Property(e => e.cube_lastprocess).HasColumnType("datetime");
-            // entity.Property(e => e.cube_lastupdate).HasColumnType("datetime");
-            // entity.Property(e => e.cube_localcubgenerate).HasMaxLength(5);
-            // entity.Property(e => e.cube_name).HasMaxLength(50);
-            // entity.Property(e => e.cube_optimratio)
-            //     .HasMaxLength(255)
-            //     .IsUnicode(false);
-            // entity.Property(e => e.cube_paramwhenreplica).HasMaxLength(15);
-            // entity.Property(e => e.cube_proddatasource_prefix).HasMaxLength(3);
-            // entity.Property(e => e.cube_scope_mdxinstruction).HasColumnType("ntext");
-            // entity.Property(e => e.cube_typenormalreplica).HasMaxLength(15);
-            // entity.Property(e => e.cust_charseparator)
-            //     .HasMaxLength(255)
-            //     .IsUnicode(false);
+             entity.Property(e => e.cube_lastprocess).HasColumnType("datetime");
+             entity.Property(e => e.cube_lastupdate).HasColumnType("datetime");
+             entity.Property(e => e.cube_localcubgenerate).HasMaxLength(5);
+             //entity.Property(e => e.cube_name).HasMaxLength(50); //1
+            entity.Property(e => e.cube_optimratio)
+                .HasMaxLength(255)
+                .IsUnicode(false);
+             entity.Property(e => e.cube_paramwhenreplica).HasMaxLength(15);
+             entity.Property(e => e.cube_proddatasource_prefix).HasMaxLength(3);
+             entity.Property(e => e.cube_scope_mdxinstruction).HasColumnType("ntext");
+             entity.Property(e => e.cube_typenormalreplica).HasMaxLength(15);
+            entity.Property(e => e.cust_charseparator)
+                .HasMaxLength(255)
+                .IsUnicode(false);
              entity.Property(e => e.cust_connect_str).HasMaxLength(100);
-            // entity.Property(e => e.cust_contact1)
-            //     .HasMaxLength(100)
-            //     .IsUnicode(false);
-            // entity.Property(e => e.cust_contact2)
-            //     .HasMaxLength(100)
-            //     .IsUnicode(false);
-            // entity.Property(e => e.cust_contact3)
-            //     .HasMaxLength(100)
-            //     .IsUnicode(false);
-            // entity.Property(e => e.cust_country).HasMaxLength(30);
-            // entity.Property(e => e.cust_cubetype).HasMaxLength(9);
-            // entity.Property(e => e.cust_dbtype).HasMaxLength(8);
+            entity.Property(e => e.cust_contact1)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.cust_contact2)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.cust_contact3)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+             //entity.Property(e => e.cust_country).HasMaxLength(30); //1
+             entity.Property(e => e.cust_cubetype).HasMaxLength(9);
+             entity.Property(e => e.cust_dbtype).HasMaxLength(8);
              entity.Property(e => e.cust_erptype).HasMaxLength(12);
-            // entity.Property(e => e.cust_externalnotes).HasColumnType("text");
+             entity.Property(e => e.cust_externalnotes).HasColumnType("text");
              entity.Property(e => e.cust_geocode).HasMaxLength(7);
-            // entity.Property(e => e.cust_internalnotes).HasColumnType("text");
-            // entity.Property(e => e.cust_language).HasMaxLength(3);
-            // entity.Property(e => e.cust_ostype).HasMaxLength(8);
+             entity.Property(e => e.cust_internalnotes).HasColumnType("text");
+             entity.Property(e => e.cust_language).HasMaxLength(3);
+             entity.Property(e => e.cust_ostype).HasMaxLength(8);
              entity.Property(e => e.cust_rdlcurrencyformat).HasMaxLength(5);
              entity.Property(e => e.cust_rdlinterwidlen).HasMaxLength(7);
-            // entity.Property(e => e.cust_refreshfrq).HasMaxLength(10);
-            // entity.Property(e => e.cust_refreshfrqmonth).HasMaxLength(10);
+             entity.Property(e => e.cust_refreshfrq).HasMaxLength(10);
+             entity.Property(e => e.cust_refreshfrqmonth).HasMaxLength(10);
              entity.Property(e => e.cust_showfiscmeasureandset).HasMaxLength(5);
              entity.Property(e => e.cust_showpctdifferencebase100).HasMaxLength(5);
-            // entity.Property(e => e.cust_timestamp)
-            //     .IsRowVersion()
-            //     .IsConcurrencyToken();
+            entity.Property(e => e.cust_timestamp)
+                .IsRowVersion()
+                .IsConcurrencyToken();
              entity.Property(e => e.cust_town).HasMaxLength(30);
         });
 
@@ -385,8 +385,8 @@ public partial class KPIW_1_5Context : DbContext
         //         .HasConstraintName("expIns_fk_cube_id_pk");
         // });
         //
-        // modelBuilder.Entity<fact>(entity =>
-        // {
+         //modelBuilder.Entity<fact>(entity =>
+         //{
         //     entity.HasKey(e => e.fact_id_pk).HasName("fact_pk_fact_id_pk");
         //
         //     entity.HasIndex(e => new { e.fact_shortcubename, e.cube_id_pk }, "fact_uq_fact_shortcubename").IsUnique();
@@ -412,11 +412,11 @@ public partial class KPIW_1_5Context : DbContext
         //     entity.Property(e => e.fact_type).HasMaxLength(8);
         //     entity.Property(e => e.fact_zonespe).HasMaxLength(6);
         //
-        //     entity.HasOne(d => d.cube_id_pkNavigation).WithMany(p => p.facts)
-        //         .HasForeignKey(d => d.cube_id_pk)
-        //         .OnDelete(DeleteBehavior.ClientSetNull)
-        //         .HasConstraintName("fact_fk_cust_id_pk");
-        // });
+             //entity.HasOne(d => d.cube_id_pkNavigation).WithMany(p => p.facts)
+               //     .HasForeignKey(d => d.cube_id_pk)
+                 //   .OnDelete(DeleteBehavior.ClientSetNull)
+                   // .HasConstraintName("fact_fk_cust_id_pk");
+         //});
         //
         // modelBuilder.Entity<factcolumn>(entity =>
         // {
