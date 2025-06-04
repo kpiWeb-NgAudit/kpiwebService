@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using KpiWebService.Models;
-using KpiWebService.Models.Enums;
+
 
 namespace KpiWebService.Models;
 
@@ -37,22 +36,26 @@ public partial class customer
     [StringLength(30)] 
     public string cust_country { get; set; } = null!;
     //
-    [Required] // Équivalent de NOT NULL pour la validation
+    [Required]
     [Column("cust_cubetype")]
-    [StringLength(9)] // Correspond à la longueur max de la DB
-    public string cust_cubetype { get; set; }
+    [StringLength(9)] // CTFIN2012 ou CTYFI3467 ont 9 caractères
+    [RegularExpression("^(CTFIN2012|CTYFI3467|CTYPEFIN|CTYPECOM|CTYAMLK)$", ErrorMessage = "Valeur invalide pour cust_cubetype.")]
+    public string cust_cubetype { get; set; } = null!;
     //
     [Column("cust_ostype")]
-    [StringLength(8)]
-    public string? cust_ostype { get; set; }
+    [StringLength(8)] // OTHER a 5 caractères, la colonne est NVARCHAR(8)
+    [RegularExpression("^(OTHER|UNIX|WIN)$", ErrorMessage = "Valeur invalide pour cust_ostype.")]
+    public string? cust_ostype { get; set; } // Nullable
     //
     [Column("cust_dbtype")]
-    [StringLength(8)]
-    public string? cust_dbtype { get; set; }
+    [StringLength(8)] // SqlServ a 7 caractères
+    [RegularExpression("^(SqlServ|Oracle|ODBC)$", ErrorMessage = "Valeur invalide pour cust_dbtype.")]
+    public string? cust_dbtype { get; set; } // Nullable
     //
     [Required]
     [Column("cust_erptype")]
-    [StringLength(12)]
+    [StringLength(12)] // DEMOADO, SAGE500, KPITEST, DEMOSTD, DEMOFIN sont les plus longs
+    [RegularExpression("^(GERS|ADOV6|SAGE500|DEMOADO|ADO140|ADO130|KPITEST|DEMOSTD|DEMOFIN|OTHER)$", ErrorMessage = "Valeur invalide pour cust_erptype.")]
     public string cust_erptype { get; set; } = null!;
     //
     [Required]
@@ -78,13 +81,16 @@ public partial class customer
     //
     [Required]
     [Column("cust_refreshfrq")]
-    public string  cust_refreshfrq { get; set; }
+    [StringLength(10)] // RSATMON ou RFRISAT ont 7 caractères
+    [RegularExpression("^(RSAT|RSATMON|RFRISAT|RFRI|RTHU|RWED|RTUE|RMON|RALL|RNEVER)$", ErrorMessage = "Valeur invalide pour cust_refreshfrq.")]
+    public string cust_refreshfrq { get; set; } = null!;
     //
     //
     [Required]
     [Column("cust_refreshfrqmonth")]
-    [StringLength(10)] // Doit accommoder RM2805
-    public string cust_refreshfrqmonth { get; set; }
+    [StringLength(10)] // RM2805 a 6 caractères
+    [RegularExpression("^(RM2805|RM28|RM7|RM6|RM5|RM4|RM3|RM2|RM1|RNEVER)$", ErrorMessage = "Valeur invalide pour cust_refreshfrqmonth.")]
+    public string cust_refreshfrqmonth { get; set; } = null!;
     //
     [Column("cust_charseparator")]
     [StringLength(255)]
@@ -95,7 +101,8 @@ public partial class customer
     //
     [Required]
     [Column("cust_rdlinterwidlen")]
-    [StringLength(7)]
+    [StringLength(7)] // RIWL_NO ou RIWL_A4 ont 7 caractères
+    [RegularExpression("^(RIWL_NO|RIWL_A4)$", ErrorMessage = "Valeur invalide pour cust_rdlinterwidlen.")]
     public string cust_rdlinterwidlen { get; set; } = null!;
     //
     [Required]
@@ -105,7 +112,9 @@ public partial class customer
     //
     [Required]
     [Column("cust_language")]
-    public string  cust_language { get; set; }
+    [StringLength(3)]
+    [RegularExpression("^(ENG|FRA)$", ErrorMessage = "Valeur invalide pour cust_language.")]
+    public string cust_language { get; set; } = null!;
     //
      [Column("cube_nbproddatasources")]
      public int cube_nbproddatasources { get; set; }
@@ -119,16 +128,21 @@ public partial class customer
     //
     [Required]
     [Column("cust_rdlcurrencyformat")]
-    [StringLength(5)]
+    [StringLength(5)] // RCFC2 ou RCFC0 ont 5 caractères
+    [RegularExpression("^(RCFC2|RCFC0)$", ErrorMessage = "Valeur invalide pour cust_rdlcurrencyformat.")]
     public string cust_rdlcurrencyformat { get; set; } = null!;
     //
     [Required]
     [Column("cube_dailytasktrigger")]
-    public string  cube_dailytasktrigger { get; set; }
+    [StringLength(6)]
+    [RegularExpression("^(DTT0|DTT1|DTT2|DTT3|DTT22|DTTOND)$", ErrorMessage = "Valeur invalide pour cube_dailytasktrigger.")]
+    public string cube_dailytasktrigger { get; set; } = null!;
     //
     [Required]
     [Column("cube_localcubgenerate")]
-    public string  cube_localcubgenerate { get; set; }
+    [StringLength(5)] // LCGN/LCGY ont 4 chars, la colonne est NVARCHAR(5)
+    [RegularExpression("^(LCGN|LCGY)$", ErrorMessage = "Valeur invalide pour cube_localcubgenerate.")]
+    public string cube_localcubgenerate { get; set; } = null!;
     //
     [Column("cube_optimratio")]
     [StringLength(255)] 
@@ -160,22 +174,27 @@ public partial class customer
     //
     [Required]
     [Column("cust_showfiscmeasureandset")]
-    [StringLength(5)]
+    [StringLength(5)] // SFMSN ou SFMSY ont 5 caractères
+    [RegularExpression("^(SFMSN|SFMSY)$", ErrorMessage = "Valeur invalide pour cust_showfiscmeasureandset.")]
     public string cust_showfiscmeasureandset { get; set; } = null!;
     //
     [Required]
     [Column("cust_showpctdifferencebase100")]
-    [StringLength(5)]
+    [StringLength(5)] // SPDBN ou SPDBY ont 5 caractères
+    [RegularExpression("^(SPDBN|SPDBY)$", ErrorMessage = "Valeur invalide pour cust_showpctdifferencebase100.")]
     public string cust_showpctdifferencebase100 { get; set; } = null!;
     //
     [Required]
     [Column("cube_dimtimepkmanager")]
     [StringLength(6)]
+    [RegularExpression("^(DTPKV3|DTPKV2|DTPKV1)$", ErrorMessage = "Valeur invalide pour cube_dimtimepkmanager.")]
     public string cube_dimtimepkmanager { get; set; } = null!;
     //
     [Required]
     [Column("cube_globalperspective")]
-    public string  cube_globalperspective { get; set; }
+    [StringLength(6)]
+    [RegularExpression("^(GPHID|GPSHOW|GPPART)$", ErrorMessage = "Valeur invalide pour cube_globalperspective.")]
+    public string cube_globalperspective { get; set; } = null!;
     //
     [Column("cube_scope_mdxinstruction", TypeName = "ntext")]
     public string? cube_scope_mdxinstruction { get; set; }
@@ -189,11 +208,15 @@ public partial class customer
     //
     [Required]
     [Column("cube_distinctcountpartition")]
-    public string  cube_distinctcountpartition { get; set; }
+    [StringLength(6)] // DCPYES a 6 caractères, la colonne DB est NVARCHAR(6)
+    [RegularExpression("^(DCPNO|DCPYES)$", ErrorMessage = "Valeur invalide pour cube_distinctcountpartition.")]
+    public string cube_distinctcountpartition { get; set; } = null!;
     //
     [Required]
     [Column("cube_typenormalreplica")]
-    public string  cube_typenormalreplica { get; set; }
+    [StringLength(15)] // REPLICASLAVE (12), REPLICAMASTER (13)
+    [RegularExpression("^(REPLICASLAVE|REPLICAMASTER|NORMAL)$", ErrorMessage = "Valeur invalide pour cube_typenormalreplica.")]
+    public string cube_typenormalreplica { get; set; } = null!;
     //
     [Column("cube_paramwhenreplica")]
     [StringLength(15)]
