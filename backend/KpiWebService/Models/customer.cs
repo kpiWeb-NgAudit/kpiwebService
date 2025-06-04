@@ -207,26 +207,26 @@ public partial class customer
     [Timestamp] // DataAnnotation pour rowversion
     public byte[] cust_timestamp { get; set; } = null!;
     //
-     //public virtual ICollection<cube_user> cube_users { get; set; } = new List<cube_user>();
-    //
-    // public virtual ICollection<cubeset> cubesets { get; set; } = new List<cubeset>();
-    //
-    // public virtual ICollection<dimdbextractsV2> dimdbextractsV2s { get; set; } = new List<dimdbextractsV2>();
-    //
-    // public virtual ICollection<dimension> dimensions { get; set; } = new List<dimension>();
-    //
-    // public virtual ICollection<exploitInstruction> exploitInstructions { get; set; } = new List<exploitInstruction>();
-    //
-    // public virtual ICollection<factdbextractsV2> factdbextractsV2s { get; set; } = new List<factdbextractsV2>();
-    //
-    // public virtual ICollection<fact> facts { get; set; } = new List<fact>();
-    //
-    // public virtual ICollection<perspective> perspectives { get; set; } = new List<perspective>();
-    //
-    // public virtual ICollection<rdllist> rdllists { get; set; } = new List<rdllist>();
-    //
-    // public virtual ICollection<role> roles { get; set; } = new List<role>();
-    //
-    // public virtual ICollection<source> sources { get; set; } = new List<source>();
+     public virtual ICollection<cube_user> cube_users { get; set; } = new List<cube_user>();
+    
+     public virtual ICollection<cubeset> cubesets { get; set; } = new List<cubeset>();
+    
+     public virtual ICollection<dimdbextractsV2> dimdbextractsV2s { get; set; } = new List<dimdbextractsV2>();
+    
+     public virtual ICollection<dimension> dimensions { get; set; } = new List<dimension>();
+    
+     public virtual ICollection<exploitInstruction> exploitInstructions { get; set; } = new List<exploitInstruction>();
+    
+     public virtual ICollection<factdbextractsV2> factdbextractsV2s { get; set; } = new List<factdbextractsV2>();
+    
+     public virtual ICollection<fact> facts { get; set; } = new List<fact>();
+    
+     public virtual ICollection<perspective> perspectives { get; set; } = new List<perspective>();
+    
+     public virtual ICollection<rdllist> rdllists { get; set; } = new List<rdllist>();
+    
+     public virtual ICollection<role> roles { get; set; } = new List<role>();
+    
+     public virtual ICollection<source> sources { get; set; } = new List<source>();
     
 }
