@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace KpiWebService.Models;
 
@@ -24,7 +25,6 @@ public partial class dimcolumn
     public string dimcol_cubetype { get; set; } = null!;
 
     public string dimcol_cubeproc { get; set; } = null!;
-
     public int? dimcol_cubesort { get; set; }
 
     public string? dimcol_cubeformula { get; set; }

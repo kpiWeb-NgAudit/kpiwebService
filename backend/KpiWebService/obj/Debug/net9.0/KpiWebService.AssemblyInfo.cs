@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KpiWebService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47962c401c5847a88c1f682ed15bb4402dc90e45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b88c375283b2572dbb039c1458bf62bb97a39cfe")]
 [assembly: System.Reflection.AssemblyProductAttribute("KpiWebService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KpiWebService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
